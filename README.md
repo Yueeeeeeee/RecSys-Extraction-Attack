@@ -55,7 +55,7 @@ Run the above command (with arguments) to perform data poisoning attacks, retrai
 
 ## Performance
 
-Our models are trained 100 / 20 epochs repspectively for appliances from REDD and UK-DALE dataset, all other parameters could be found in 'train.py' and 'utils.py'
+Recommender systems are first trained as black-box models, these are used to generate sythetic data for white-box model distillation, followed by profile pollution and data poisoning attacks based on white-box model weights, for training details please refer to our paper.
 
 ### Black-Box and Extracted Models
 
