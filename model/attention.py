@@ -198,6 +198,6 @@ class SASTransformerBlock(nn.Module):
             d_model=hidden, d_ff=feed_forward_hidden, dropout=dropout)
 
     def forward(self, x, mask):
-        x = self.attention(self.layer_norm(x), x, x)
+        x = self.attention(self.layer_norm(x), x, x, mask)
         x = self.feed_forward(x)
         return x

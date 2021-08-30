@@ -78,7 +78,6 @@ class BERTModel(nn.Module):
         self.activation = GELU()
 
     def forward(self, x, embedding_weight, mask):
-        embedding = x.clone()
         for transformer in self.transformer_blocks:
             x = transformer.forward(x, mask)
         x = self.activation(self.linear(x))
